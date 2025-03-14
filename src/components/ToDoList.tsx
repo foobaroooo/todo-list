@@ -13,9 +13,10 @@ const ToDoList = ({ todos: initialTodos } : ToDoListProps) => {
     const [todos, setTodos] = useState(initialTodos);
 
     const handleAddTask = (task:ToDoType) => {
-        // console.log(task);
+        // todos.push(task);
+        const newTodos = [...todos, task];
 
-        todos.push(task);
+        setTodos(newTodos);
         setNewTask(task);
     }
 
